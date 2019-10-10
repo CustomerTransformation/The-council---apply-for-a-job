@@ -11,7 +11,7 @@
     "date_due_warn": "",
     "showCaseReference": false,
     "isSubform": false,
-    "notes": "added a countUpload check to make sure the form cannot be submitted until the attachment was uploaded",
+    "notes": "allowed address other than Portsmouth",
     "initial_stage": "Stage 1",
     "initial_stage_id": "AF-Stage-21846fcc-5b72-4f15-831a-e80308b61058",
     "prefix": "HR",
@@ -372,7 +372,7 @@
                     "label": "Parameters for contact details",
                     "dataName": "param_CD",
                     "labelPosition": "alignLeft",
-                    "defaultValue": "dNm dAl dCi mFn mLn mAd mOc",
+                    "defaultValue": "dNm dAp dCi mFn mLn mAd mOc",
                     "helpText": "",
                     "hidden": true,
                     "readOnly": true,
@@ -6998,6 +6998,11 @@
           "populated": true
         },
         {
+          "label": "Upload documents",
+          "dataName": "uploadDocuments",
+          "populated": true
+        },
+        {
           "label": "Full employment history - please give information of employer, employment dates, reason for leaving, and explain any gaps:",
           "dataName": "fullEmployment",
           "populated": true
@@ -7018,13 +7023,13 @@
           "populated": true
         },
         {
-          "label": "Where the criteria is given for 'who is the person' in the job description, you must demonstrate your suitability with relevant examples against each of the points listed. We receive a lot of applications, so the more relevant and detailed the examples, the better.",
-          "dataName": "textarea1",
+          "label": "mandatory",
+          "dataName": "mandatory",
           "populated": true
         },
         {
-          "label": "Upload documents",
-          "dataName": "uploadDocuments",
+          "label": "Please explain why you are best suited for this role. Please review 'job profile' for job criteria.",
+          "dataName": "textarea1",
           "populated": true
         },
         {
@@ -7053,13 +7058,13 @@
           "populated": true
         },
         {
-          "label": "Do you have any previous convictions?",
+          "label": "The Rehabilitation of Offenders Act ",
           "dataName": "convictions",
           "populated": true
         },
         {
-          "label": "Please detail offence(s) including date(s) and sentence(s) ",
-          "dataName": "offenceDetails",
+          "label": "countUpload",
+          "dataName": "countUpload",
           "populated": true
         }
       ]
