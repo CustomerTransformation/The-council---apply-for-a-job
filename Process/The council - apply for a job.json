@@ -11,7 +11,7 @@
     "date_due_warn": "",
     "showCaseReference": false,
     "isSubform": false,
-    "notes": "allowed address other than Portsmouth",
+    "notes": "amended introduction",
     "initial_stage": "Stage 1",
     "initial_stage_id": "AF-Stage-21846fcc-5b72-4f15-831a-e80308b61058",
     "prefix": "HR",
@@ -25,7 +25,7 @@
       "name": "Stage 1",
       "props": {
         "form": "AF-Form-7c8fb8ea-889b-467a-9e61-32fe0607fa30",
-        "xpos": 26,
+        "xpos": 28,
         "ypos": 22,
         "group": null,
         "integrations": [
@@ -338,7 +338,7 @@
                     "outerClass": "",
                     "width": "",
                     "showInSummary": false,
-                    "content": "<p>Complete this application to apply for a vacancy advertised on the Portsmouth City Council website.</p>",
+                    "content": "<p>Complete this application to apply for a vacancy advertised on the Portsmouth City Council website.</p>\n<p>Please note that Portsmouth City Council emails can sometimes end up in your 'junk' or 'spam' folder. Be sure to check these folders so you don't miss any emails from our recruitment team.</p>",
                     "displayCondition": null
                   },
                   "conditionInputs": [],
@@ -1118,6 +1118,51 @@
                               "id": "AF-Field-96b10f88-d9f3-40c5-9a37-02d35fc93a41"
                             },
                             {
+                              "type": "text",
+                              "props": {
+                                "label": "Default for Address In Out",
+                                "dataName": "defaultAddressIn",
+                                "labelPosition": "alignLeft",
+                                "defaultValue": "if({subParam} contains 'ip',0,\n           if({subParam} contains 'op',1,\n                     if({subParam} contains 'ov',2,'')))",
+                                "helpText": "",
+                                "hidden": true,
+                                "readOnly": true,
+                                "summaryField": false,
+                                "displayName": true,
+                                "outerClass": null,
+                                "labelClass": null,
+                                "inputClass": null,
+                                "outputFormat": "normal",
+                                "currencyPrefix": null,
+                                "width": null,
+                                "inputMask": null,
+                                "inputMaskPlaceholder": null,
+                                "lengthCount": null,
+                                "hideWhenBlank": null,
+                                "displayCondition": null,
+                                "mandatoryCondition": null,
+                                "readonlyCondition": null,
+                                "mandatory": false,
+                                "minimumLength": "",
+                                "maximumLength": "",
+                                "validationCondition": "",
+                                "validationMask": "",
+                                "mandatoryMessage": "This information is required",
+                                "minimumLengthMessage": "Please input at least _min_value_ characters",
+                                "maximumLengthMessage": "Please input no more than _max_value_ characters",
+                                "validationMaskMessage": "Please input text of the format: _validation_mask_",
+                                "validationConditionMessage": "This field is invalid",
+                                "validationMaskMessageValue": "Select...",
+                                "separatedDateDefaultValue": {
+                                  "day": "",
+                                  "month": "",
+                                  "year": ""
+                                }
+                              },
+                              "conditionInputs": [],
+                              "id": "AF-Field-90faf09d-7218-48c5-99ad-e1a05ecfc308"
+                            },
+                            {
                               "type": "radio",
                               "props": {
                                 "label": "Is the address",
@@ -1125,7 +1170,7 @@
                                 "labelPosition": "alignLeft",
                                 "defaultType": "text",
                                 "defaultValue": null,
-                                "defaultValueText": "",
+                                "defaultValueText": "{defaultAddressIn}",
                                 "listSource": "one-time-list",
                                 "helpText": "",
                                 "readOnly": false,
